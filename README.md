@@ -33,7 +33,7 @@ Quelques petites questions :
 - Comment re-définir des propriétés ?
   - Il faut utilser la classe MuiButton dans la clé overrides
 - A quoi vous fait penser `withStyle` ? Comment l'utiliser ?
-  - IL faut fournir un fichier style à l'application, on définit une const styles et ajoute des propriétés souhaitées et on       ajoute la class au bouton.
+  - A un HOC. Lors de l'exportation du component
 - Reproduire les deux boutons rouge et bleu présentées dans la vidéo.
 
   ```javascript
@@ -113,7 +113,7 @@ return (
 const Button = styled.button`color: white; background-color: red;`;
 
 export default BoutonTest;
-````
+```
 
 Sans tagged templates :
 
