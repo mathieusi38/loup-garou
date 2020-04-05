@@ -33,7 +33,7 @@ Quelques petites questions :
 - Comment re-définir des propriétés ?
 - Il faut utilser la classe MuiButton dans la clé overrides
 - A quoi vous fait penser `withStyle` ? Comment l'utiliser ?
-- IL faut fournir un fichier style à l'application, on définit une const styles et ajoute des propriétés souhaitées et on ajoute la class au bouton.
+  - IL faut fournir un fichier style à l'application, on définit une const styles et ajoute des propriétés souhaitées et on       ajoute la class au bouton.
 - Reproduire les deux boutons rouge et bleu présentées dans la vidéo.
 
   ```javascript
@@ -43,8 +43,7 @@ Quelques petites questions :
     createMuiTheme,
     withStyles
   } from "@material-ui/core/styles";
-  ```
-
+ 
 import Button from "@material-ui/core/Button";
 import blue from "@material-ui/core/colors/blue";
 
@@ -79,7 +78,7 @@ backgroundColor: "red"
 
 export default withStyles(styles)(BoutonTest);
 
-````
+```
 
 ## Styled Components
 
@@ -133,7 +132,7 @@ const Button = styled.button([" color: white; background-color: red;"]);
 ```
 
 - Comment utilise-t-on les props dans cette librarie ?
-  - On doit ajouter attrs qui prend en paramère une arraw function avec props et l'objet à retourner et on peut donc ensuite utiliser props.l'objet
+  - On doit ajouter attrs qui prend en paramère une arraw function avec props et l'objet à retourner et on peut donc ensuite   utiliser props.l'objet
 - Reprendre l'exemple du Material UI avec styled-components; l'écrire avec la composition et avec l'héritage.
 
 Avec composition :
@@ -252,20 +251,20 @@ React.useEffect(() => {
 - Dans `App.js`, identifier les différents producteurs de données. Retrouver leur définition. Quelles données partagent-ils à l'ensemble de l'application ?
   - Il y a UserProvider, MasterGameProvider et GameProvider et BrowserRouter .
 
-* BrowserRouter : Partage les fonctions utilisées dans les Routes.
-* UserProvider: Permet à l'application d'accéder aux informations sur l'utilisateur actuellement connecté.
-* MasterGameProvider: Donne les fonctions pour créer une partie.
-* GameProvider: fournit les fonctions pour les éléments du jeu.
+	- BrowserRouter : Partage les fonctions utilisées dans les Routes.
+	- UserProvider: Permet à l'application d'accéder aux informations sur l'utilisateur actuellement connecté.
+	- MasterGameProvider: Donne les fonctions pour créer une partie.
+	- GameProvider: fournit les fonctions pour les éléments du jeu.
 
-- Identifier les différentes pages de l'application. Décrire à l'aide d'une phrase le rôle de chacune d'entre elles.
-- StartPage : La page d'accueil qui permet d'accéder à la page de création de partie ou pour rejoindre une partie.
-- EndPage : La page s'affiche en fin de partie et permet d'afficher les gagnants.
-- CodePage : Permet à l'utilisateur d'entrer le code de la partie et son nom d'utilisateur.
-- CreatePage : Permet de fournir le code de la partie à l'utilisateur, d'ajouter un nom et de lancer la partie.
-- ResultsPage : Affiche les morts et fin de phase.
-- AlivePage : Affiche le rôle de l'utilisateur.
-- DeadPage : Affiche que l'utilisateur est mort.
-- SpellPage : Affiche les différentes actions que l'utilisateur peut faire.
+	- Identifier les différentes pages de l'application. Décrire à l'aide d'une phrase le rôle de chacune d'entre elles.
+	- StartPage : La page d'accueil qui permet d'accéder à la page de création de partie ou pour rejoindre une partie.
+	- EndPage : La page s'affiche en fin de partie et permet d'afficher les gagnants.
+	- CodePage : Permet à l'utilisateur d'entrer le code de la partie et son nom d'utilisateur.
+	- CreatePage : Permet de fournir le code de la partie à l'utilisateur, d'ajouter un nom et de lancer la partie.
+	- ResultsPage : Affiche les morts et fin de phase.
+	- AlivePage : Affiche le rôle de l'utilisateur.
+	- DeadPage : Affiche que l'utilisateur est mort.
+	- SpellPage : Affiche les différentes actions que l'utilisateur peut faire.
 
 - Pourquoi voit-on sur plusieurs pages "Chargement du master game en cours" ?
   - Parce que ces pages utilisent le provider MasterGame
@@ -290,21 +289,18 @@ React.useEffect(() => {
 
 - Dans Firebase, nous ne pouvons pas ajouter des champs à un utilisateur. Par conséquent, nous devons créer une collection d'utilisateurs et synchroniser les utilisateurs avec cette table. Expliquer où est-ce que cette synchronisation a lieu.
 
-- Cette synchronisation a lieu dans useUser
+	- Cette synchronisation a lieu dans useUser
 
 - A votre avis, à quoi sert useEffect ?
 - A quoi sert la fonction `unsubscribe` utilisée dans les `useEffect` de `User.js` ?
-
-- La fonction Unsubscribe permet de stopper l'attente d'update de la part de firebase.
-
+	- La fonction Unsubscribe permet de stopper l'attente d'update de la part de firebase.
 - Décrire les trois valeurs de retour de `UseUser`.
 
-* error: Permet de contenir les infos informations d'erreur si il y a une erreur.
-* loading: Permet de vérifier si les informations sont en cours de chargmenet
-* user: Contient les infos de l'utilisteur
+	- error: Permet de contenir les infos informations d'erreur si il y a une erreur.
+	- loading: Permet de vérifier si les informations sont en cours de chargmenet
+	- user: Contient les infos de l'utilisteur
 
 - Combien de collections dans Firebase pouvez-vous identifier ? A quoi correspondent les `doc` ?
-
   - On identifie 2 collections dans Firebase : "users" et " game "
     "users " correspond aux utilisateurs et " game " aux parties
 
